@@ -86,6 +86,9 @@ package="tree"
 function="install_tree"
 install_package
 
+package=""
+function=""
+
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
