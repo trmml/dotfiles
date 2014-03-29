@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl -LO https://github.com/trommel/dotfiles/raw/master/.bash_profile ~/.bash_profile
-curl -LO https://github.com/trommel/dotfiles/raw/master/.bashrc ~/.bashrc
+curl -LO https://raw.githubusercontent.com/trommel/dotfiles/master/.bash_profile ~/.bash_profile
+curl -LO https://raw.githubusercontent.com/trommel/dotfiles/master/.bashrc ~/.bashrc
