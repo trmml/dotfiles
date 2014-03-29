@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'sass'
+gem 'rails'
+gem 'rainbow'
+gem 'twitter'
+gem 't'
