@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl -LOs http://git.io/wix-VA ~/.bash_profile
-curl -LOs http://git.io/5RITeQ ~/.bashrc
+curl -O https://github.com/trommel/dotfiles/raw/master/.bash_profile ~/.bash_profile
+curl -O https://github.com/trommel/dotfiles/raw/master/.bashrc ~/.bashrc
