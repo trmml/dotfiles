@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'rubygems-update'
 gem 'sass'
 gem 'rails'
 gem 'rainbow'
