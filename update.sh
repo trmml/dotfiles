@@ -2,6 +2,7 @@
 
 brew update
 brew upgrade
+n latest
 npm update -gs
 apm upgrade
 update_rubygems
