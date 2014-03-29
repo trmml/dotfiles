@@ -76,7 +76,7 @@ function="install_node"
 install_package
 
 package="npm"
-function="install_node"
+function="install_npm"
 install_package
 
 package="hr"
