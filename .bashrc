@@ -107,7 +107,7 @@ package="bower"
 function="install_bower"
 install_package
 
-package="coffee-script"
+package="coffee"
 function="install_coffee"
 install_package
 
