@@ -46,44 +46,44 @@ install_package() {
 
 # If [ package ] isn't installed, install it
 
-$package="brew"
-$function="install_brew"
+package="brew"
+function="install_brew"
 install_package
 
-$package="rvm"
-$function="install_rvm"
+package="rvm"
+function="install_rvm"
 install_package
 
-$package="node"
-$function="install_node"
+package="node"
+function="install_node"
 install_package
 
-$package="npm"
-$function="install_node"
+package="npm"
+function="install_node"
 install_package
 
-$package="hr"
-$function="install_hr"
+package="hr"
+function="install_hr"
 install_package
 
-$package="cmatrix"
-$function="install_cmatrix"
+package="cmatrix"
+function="install_cmatrix"
 install_package
 
-$package="cowsay"
-$function="install_cowsay"
+package="cowsay"
+function="install_cowsay"
 install_package
 
-$package="toilet"
-$function="install_cowsay"
+package="toilet"
+function="install_cowsay"
 install_package
 
-$package="wget"
-$function="install_wget"
+package="wget"
+function="install_wget"
 install_package
 
-$package="tree"
-$function="install_tree"
+package="tree"
+function="install_tree"
 install_package
 
 # If the bucket directory doesn't exist, create it
