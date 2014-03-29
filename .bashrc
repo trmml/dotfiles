@@ -43,6 +43,23 @@ install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
 
+install_bower() {
+  npm install -g bower
+}
+
+install_coffee() {
+  npm install -g coffee-script
+}
+
+install_keybase() {
+  npm install -g keybase-installer
+  keybase-installer
+}
+
+install_n() {
+  npm install -g n
+}
+
 
 # If [ package ] isn't installed, install it
 
@@ -84,6 +101,22 @@ install_package
 
 package="tree"
 function="install_tree"
+install_package
+
+package="bower"
+function="install_bower"
+install_package
+
+package="coffee-script"
+function="install_coffee"
+install_package
+
+package="keybase-installer"
+function="install_keybase"
+install_package
+
+package="n"
+function="install_n"
 install_package
 
 package=""
