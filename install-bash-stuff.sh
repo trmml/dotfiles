@@ -6,7 +6,14 @@ fi
 
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bash_profile ~/.bash_profile >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bashrc ~/.bashrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/update.sh > /usr/local/bucket/update >/dev/null 2>&1
+
+currentdir=$(pwd)
+cd /usr/local/bucket
+
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/update.sh >/dev/null 2>&1
+mv update.sh update
 chmod +x /usr/local/bucket/update
+
+cd $currentdir
 
 echo "dotfiles have been updated"
