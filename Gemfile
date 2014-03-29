@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
+
 gem 'rubygems-update'
 gem 'sass'
+gem 'sinatra'
+gem 'jekyll'
 gem 'rails'
 gem 'rainbow'
 gem 'twitter'
