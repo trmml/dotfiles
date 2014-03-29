@@ -1,4 +1,3 @@
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
