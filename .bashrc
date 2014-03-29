@@ -4,6 +4,11 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# If the bucket directory doesn't exist, create it
+if [[ ! -d "/usr/local/bucket" ]]; then
+  mkdir /usr/local/bucket
+fi
+
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
 
