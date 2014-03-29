@@ -15,11 +15,76 @@ install_npm() {
   curl -L https://npmjs.org/install.sh | sh
 }
 
-# If brew / rvm / node / npm isn't installed, install it
-command -v brew >/dev/null 2>&1 || { echo "Homebrew not found. Installing." >&2; install_brew; }
-command -v rvm >/dev/null 2>&1 || { echo "rvm not found. Installing." >&2; install_rvm; }
-command -v node >/dev/null 2>&1 || { echo "node not found. Installing." >&2; install_node; }
-command -v npm >/dev/null 2>&1 || { echo "npm not found. Installing." >&2; install_npm; }
+install_hr() {
+  brew install hr
+}
+
+install_cmatrix() {
+  brew install cmatrix
+}
+
+install_cowsay() {
+  brew install cowsay
+}
+
+install_toilet() {
+  brew install toilet
+}
+
+install_wget() {
+  brew install wget
+}
+
+install_tree() {
+  brew install toilet
+}
+
+install_package() {
+  command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
+}
+
+
+# If [ package ] isn't installed, install it
+
+$package="brew"
+$function="install_brew"
+install_package
+
+$package="rvm"
+$function="install_rvm"
+install_package
+
+$package="node"
+$function="install_node"
+install_package
+
+$package="npm"
+$function="install_node"
+install_package
+
+$package="hr"
+$function="install_hr"
+install_package
+
+$package="cmatrix"
+$function="install_cmatrix"
+install_package
+
+$package="cowsay"
+$function="install_cowsay"
+install_package
+
+$package="toilet"
+$function="install_cowsay"
+install_package
+
+$package="wget"
+$function="install_wget"
+install_package
+
+$package="tree"
+$function="install_tree"
+install_package
 
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
