@@ -146,7 +146,7 @@ export PATH=/usr/local/bucket:$PATH
 
 # Colors
 R="\[\033[0;31m\]" # red
-W="\[\033[0;37m\]" # white
+W="\[\033[0;33m\]" # white
 
 # Custom PS1
 export PS1="\u \w $R\$$W "
