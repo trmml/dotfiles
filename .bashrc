@@ -127,6 +127,10 @@ if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
 fi
 
+# Colors
+local R="\[\033[0;31m\]" # red
+local W="\[\033[0;37m\]" # white
+
 #Define Aliases
 alias ls="ls -FG"
 
@@ -144,7 +148,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
 
 # Custom PS1
-export PS1="\u \w $ "
+export PS1="\u \w $R\$$W "
 
 # Make Terminal colorful
 export CLICOLOR=1
