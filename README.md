@@ -13,3 +13,7 @@ I prefer easy things
 ```bash
 $ curl -Ls http://git.io/c9yaXQ | sh
 ```
+
+## Credits
+
+- [Base16 Terminal Theme](http://git.io/S04dtg) thanks to [Steven Haddox](https://github.com/stevenhaddox)

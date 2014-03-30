@@ -151,9 +151,6 @@ R="\[\033[0;31m\]" # red
 B="\[\033[0;34m\]" # blue
 W="\[\033[0;39m\]" # white
 
-# Clear
-clear
-
 # Custom PS1
 export PS1="$B\u$W \w $R\$$W "
 
