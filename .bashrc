@@ -36,11 +36,7 @@ install_wget() {
 }
 
 install_tree() {
-  brew install toilet
-}
-
-install_package() {
-  command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
+  brew install tree
 }
 
 install_bower() {
@@ -58,6 +54,10 @@ install_keybase() {
 
 install_n() {
   npm install -g n
+}
+
+install_package() {
+  command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
 
 
