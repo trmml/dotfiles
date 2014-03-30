@@ -146,18 +146,16 @@ export PATH=/usr/local/bucket:$PATH
 
 # Colors
 R="\[\033[0;31m\]" # red
-W="\[\033[0;37m\]" # white
 
 # Custom PS1
-export PS1="\u \w $R\$$W "
+export PS1="\u \w $R\$;tput sgr0 "
 
 # Reset colors
 R=""
-W=""
 
 # Make Terminal colorful
-#export CLICOLOR=1
-#export LSCOLORS=GxFxCxDxBxegedabagaced
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
