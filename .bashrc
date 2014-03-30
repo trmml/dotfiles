@@ -143,15 +143,16 @@ PATH=$PATH:$HOME/.rvm/bin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
 
-
 # Colors
 R="\[\033[0;31m\]" # red
+W="\[\033[0;37m\]" # white
 
 # Custom PS1
-export PS1="\u \w $R\$;tput sgr0 "
+export PS1="\u \w $R $ $W "
 
 # Reset colors
 R=""
+W=""
 
 # Make Terminal colorful
 export CLICOLOR=1
