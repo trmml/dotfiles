@@ -127,6 +127,9 @@ if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
 fi
 
+#Define Aliases
+alias ls="ls -FG"
+
 # Add autocomplete for Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
@@ -139,6 +142,10 @@ PATH=$PATH:$HOME/.rvm/bin
 # Export to PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
+
+# Make Terminal colorful
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
