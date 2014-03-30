@@ -60,7 +60,6 @@ install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
 
-
 # If [ package ] isn't installed, install it
 
 package="brew"
@@ -125,6 +124,10 @@ function=""
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
+fi
+
+if [[ ! -f "~/.hushlogin" ]]; then
+  touch ~/.hushlogin
 fi
 
 #Define Aliases
