@@ -18,5 +18,5 @@ mv update.sh update
 chmod +x /usr/local/bucket/update
 
 cd $currentdir
-
+source ~/.bash_profile
 echo "dotfiles have been updated"
