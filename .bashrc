@@ -144,7 +144,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
 
 # Custom PS1
-export PS1="\[\033[s\033[10Ctest\033[u\]"
+export PS1="\u \w $ "
 
 # Make Terminal colorful
 export CLICOLOR=1
