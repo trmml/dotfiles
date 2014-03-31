@@ -1,6 +1,7 @@
 # Define some functions for later usage
 
 update() {
+  curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
   n latest
@@ -163,10 +164,11 @@ export PATH=/usr/local/bucket:$PATH
 # Colors
 R="\[\033[0;31m\]" # red
 B="\[\033[0;34m\]" # blue
-W="\[\033[0;39m\]" # white
+P="\[\033[0;35m\]" # purple
+C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$B\u$W \w $R\$$W "
+export PS1="$B\u$C $P\w$C $R\$$C "
 
 # Reset colors
 R=""
