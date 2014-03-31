@@ -1,4 +1,18 @@
 # Define some functions for later usage
+
+update() {
+  brew update
+  brew upgrade
+  n latest
+  npm update -gs
+  apm upgrade
+  update_rubygems
+  gem update --system
+  gem update
+  pip-review --auto
+  keybase-installer
+}
+
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
