@@ -164,11 +164,10 @@ export PATH=/usr/local/bucket:$PATH
 # Colors
 R="\[\033[0;31m\]" # red
 B="\[\033[0;34m\]" # blue
-P="\[\033[0;35m\]" # purple
 C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$B\u$C $P\w$C $R\$$C "
+export PS1="$B\u$C \w $R\$$C "
 
 # Reset colors
 R=""
