@@ -1,13 +1,5 @@
-# Stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="curl -Ls http://git.io/c9yaXQ | sh; sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; n latest; npm update npm -g; npm update -gs; apm upgrade; update_rubygems; gem update --system; gem update; pip-review --auto; keybase-installer"
+# Souce .aliases
+. ~/.aliases
 
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -139,9 +131,6 @@ fi
 if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
-
-#Define Aliases
-alias ls="ls -FG"
 
 # Add autocomplete for Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
