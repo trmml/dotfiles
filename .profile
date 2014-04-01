@@ -1,2 +1,2 @@
-# If the profile is running, source .bashrc
+# Source .bashrc
 . ~/.bashrc
