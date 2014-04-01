@@ -81,64 +81,64 @@ install_package() {
 
 # If [ package ] isn't installed, install it
 
-package="brew"
-function="install_brew"
-install_package
-
-package="rvm"
-function="install_rvm"
-install_package
-
-package="node"
-function="install_node"
-install_package
-
-package="npm"
-function="install_npm"
-install_package
-
-package="hr"
-function="install_hr"
-install_package
-
-package="cmatrix"
-function="install_cmatrix"
-install_package
-
-package="cowsay"
-function="install_cowsay"
-install_package
-
-package="toilet"
-function="install_cowsay"
-install_package
-
-package="wget"
-function="install_wget"
-install_package
-
-package="tree"
-function="install_tree"
-install_package
-
-package="bower"
-function="install_bower"
-install_package
-
-package="coffee"
-function="install_coffee"
-install_package
-
-package="keybase-installer"
-function="install_keybase"
-install_package
-
-package="n"
-function="install_n"
-install_package
-
-package=""
-function=""
+# package="brew"
+# function="install_brew"
+# install_package
+#
+# package="rvm"
+# function="install_rvm"
+# install_package
+#
+# package="node"
+# function="install_node"
+# install_package
+#
+# package="npm"
+# function="install_npm"
+# install_package
+#
+# package="hr"
+# function="install_hr"
+# install_package
+#
+# package="cmatrix"
+# function="install_cmatrix"
+# install_package
+#
+# package="cowsay"
+# function="install_cowsay"
+# install_package
+#
+# package="toilet"
+# function="install_cowsay"
+# install_package
+#
+# package="wget"
+# function="install_wget"
+# install_package
+#
+# package="tree"
+# function="install_tree"
+# install_package
+#
+# package="bower"
+# function="install_bower"
+# install_package
+#
+# package="coffee"
+# function="install_coffee"
+# install_package
+#
+# package="keybase-installer"
+# function="install_keybase"
+# install_package
+#
+# package="n"
+# function="install_n"
+# install_package
+#
+# package=""
+# function=""
 
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
