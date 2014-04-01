@@ -1,7 +1,4 @@
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi
-
-if [ -f ~/.profile ]; then
-  source ~/.profile
-fi
+# If files exist, source them
+if [ -f ~/.aliases ]; then . ~/.aliases; fi
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+if [ -f ~/.profile ]; then . ~/.profile; fi

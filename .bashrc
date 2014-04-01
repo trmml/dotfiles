@@ -1,5 +1,7 @@
-# Souce .aliases
-. ~/.aliases
+# Source Alias
+if [ -f ~/.alias ]; then
+  . ~/.alias
+fi
 
 # Define some functions
 
@@ -148,6 +150,7 @@ if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
 fi
 
+# If .hushlogin doesn't exist, create it
 if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
