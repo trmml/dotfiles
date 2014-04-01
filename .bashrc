@@ -1,8 +1,3 @@
-# Source Alias
-if [ -f ~/.alias ]; then
-  . ~/.alias
-fi
-
 # Define some functions
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
