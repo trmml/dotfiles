@@ -1,18 +1,13 @@
-# Define some functions for later usage
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-update() {
-  curl -Ls http://git.io/c9yaXQ | sh
-  brew update
-  brew upgrade
-  n latest
-  npm update -gs
-  apm upgrade
-  update_rubygems
-  gem update --system
-  gem update
-  pip-review --auto
-  keybase-installer
-}
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update="curl -Ls http://git.io/c9yaXQ | sh; sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; n latest; npm update npm -g; npm update -gs; apm upgrade; update_rubygems; gem update --system; gem update; pip-review --auto; keybase-installer"
 
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
