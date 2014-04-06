@@ -140,6 +140,16 @@ install_package
 package=""
 function=""
 
+if [ ! gem spec rake > /dev/null 2>&1 ]; then
+  gem install rake
+fi
+
+git clone https://github.com/trommel/dotfiles.git
+cd dotfiles
+rake
+cd ..
+rm -r dotfiles
+
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
