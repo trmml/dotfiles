@@ -21,6 +21,9 @@ if [ ! gem spec rake > /dev/null 2>&1 ]; then
 fi
 
 # Essentially installs all the gems
+if [ -d ".something" ]; then
+  rm -r .something
+fi
 mkdir .something
 cd .something
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Rakefile >/dev/null 2>&1
