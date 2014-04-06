@@ -16,4 +16,14 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.aliases >/dev
 
 cd $currentdir
 source ~/.bash_profile
+if [ ! gem spec rake > /dev/null 2>&1 ]; then
+  gem install rake
+fi
+
+# Essentially installs all the gems
+git clone https://github.com/trommel/dotfiles.git >/dev/null 2>&1
+cd dotfiles
+rake
+cd ..
+rm -r dotfiles
 echo "dotfiles have been updated"
