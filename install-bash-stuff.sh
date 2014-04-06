@@ -21,9 +21,11 @@ if [ ! gem spec rake > /dev/null 2>&1 ]; then
 fi
 
 # Essentially installs all the gems
-git clone https://github.com/trommel/dotfiles.git >/dev/null 2>&1
-cd dotfiles
+mkdir .something
+cd .something
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Rakefile >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Gemfile >/dev/null 2>&1
 rake
 cd ..
-rm -r dotfiles
+rm -r .something
 echo "dotfiles have been updated"
