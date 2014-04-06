@@ -144,7 +144,8 @@ if [ ! gem spec rake > /dev/null 2>&1 ]; then
   gem install rake
 fi
 
-git clone https://github.com/trommel/dotfiles.git
+# Essentially installs all the gems
+git clone https://github.com/trommel/dotfiles.git >/dev/null 2>&1
 cd dotfiles
 rake
 cd ..
