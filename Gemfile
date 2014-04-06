@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'cocoapods'
 gem 'rubygems-update'
 gem 'sass'
 gem 'sinatra'
