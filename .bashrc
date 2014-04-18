@@ -2,9 +2,10 @@
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
-  curl -Ls http://git.io/c9yaXQ | sh
   #sudo softwareupdate -i -a
+  curl -Ls http://git.io/c9yaXQ | sh
   brew update
+  rvm requirements
   brew upgrade
   brew prune
   brew cleanup
