@@ -5,7 +5,6 @@ update() {
   #sudo softwareupdate -i -a
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
-  rvm requirements
   brew upgrade
   brew prune
   brew cleanup
@@ -16,6 +15,7 @@ update() {
   update_rubygems
   gem update --system
   gem update
+  rvm requirements
   pip-review --auto
   keybase-installer
 }
