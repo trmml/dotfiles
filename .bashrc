@@ -4,6 +4,8 @@
 update() {
   #sudo softwareupdate -i -a
   curl -Ls http://git.io/c9yaXQ | sh
+  rvm get stable
+  rvm reload
   brew update
   brew upgrade
   brew prune
