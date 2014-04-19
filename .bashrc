@@ -3,13 +3,13 @@
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
   #sudo softwareupdate -i -a
-  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
   brew prune
   brew cleanup
   n latest
+  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   npm update npm -g
   npm update -gs
   apm upgrade
