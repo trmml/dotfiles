@@ -3,6 +3,7 @@
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
   #sudo softwareupdate -i -a
+  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
@@ -18,6 +19,8 @@ update() {
   rvm requirements
   pip-review --auto
   keybase-installer
+  #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
+  #rm -rf ~/Library/Application\ Support/Alcatraz
 }
 
 install_brew() {
