@@ -4,12 +4,12 @@
 update() {
   #sudo softwareupdate -i -a
   curl -Ls http://git.io/c9yaXQ | sh
-  rvm get stable
-  rvm reload
   brew update
   brew upgrade
   brew prune
   brew cleanup
+  rvm get stable
+  rvm reload
   n latest
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   npm update npm -g
