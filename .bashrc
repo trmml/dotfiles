@@ -2,9 +2,6 @@
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
-  if [ "$UID" -ne 0 ]; then
-    sudo softwareupdate -i -a -v
-  fi
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
