@@ -16,6 +16,7 @@ update() {
   npm update -gs
   apm upgrade
   update_rubygems
+  gem update
   gem update --system
   gem update
   rvm requirements
