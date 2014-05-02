@@ -3,7 +3,7 @@
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
   cwd=$(pwd)
-  cd
+  cd ~
   #sudo softwareupdate -i -a -v
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
