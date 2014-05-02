@@ -2,6 +2,8 @@
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
+  cwd=$(pwd)
+  cd
   #sudo softwareupdate -i -a -v
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
@@ -20,10 +22,12 @@ update() {
   gem update --system
   gem update
   rvm requirements
+  keybase-installer
+  . .bashrc
+  cd $cwd
   #pip install --upgrade setuptools
   #pip install --upgrade pip
   #pip-review --auto
-  keybase-installer
   #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
   #rm -rf ~/Library/Application\ Support/Alcatraz
 }
