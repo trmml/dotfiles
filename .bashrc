@@ -175,15 +175,16 @@ export PATH=/usr/local/bucket:$PATH
 
 # Colors
 R="\[\033[0;31m\]" # red
+G="\[\033[0;32m\]" # green
 B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$B\u$C \w $R\$$C "
+export PS1="$G\h $B\u$C \w $R\$$C "
 
 # Reset colors
-R=""
-W=""
+R=
+W=
 
 # Make Terminal colorful
 export CLICOLOR=1
