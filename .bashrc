@@ -184,7 +184,7 @@ B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$G\h $B\u$C \w $R\$$C "
+export PS1="$B\u$C \w $R\$$C "
 
 # Reset colors
 R=
