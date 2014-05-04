@@ -198,6 +198,9 @@ export PS1="$B\u$C \w $R\$$C "
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Set alias for imgurr
+alias imgur="imgurr"
+
 # Reset variables
 R=
 W=
