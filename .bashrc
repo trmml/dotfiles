@@ -202,9 +202,6 @@ eval "$(hub alias -s)"
 R=
 W=
 
-
-# Autocomplete for hub
-
 # hub tab-completion script for bash.
 # This script complements the completion script that ships with git.
 
