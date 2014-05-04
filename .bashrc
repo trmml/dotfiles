@@ -195,7 +195,10 @@ C="\[\033[0;39m\]" # clear
 # Custom PS1
 export PS1="$B\u$C \w $R\$$C "
 
-# Reset colors
+# Set alias for hub
+eval "$(hub alias -s)"
+
+# Reset variables
 R=
 W=
 
