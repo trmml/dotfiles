@@ -89,6 +89,10 @@ install_n() {
   npm install -g n
 }
 
+install_hub() {
+  brew install hub
+}
+
 install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
@@ -151,8 +155,13 @@ package="n"
 function="install_n"
 install_package
 
-package=""
-function=""
+package="hub"
+function="install_hub"
+install_package
+
+# Reset variables
+package=
+function=
 
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
