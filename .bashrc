@@ -154,6 +154,16 @@ install_package
 package=
 function=
 
+PS1() {
+  export PS1="$B\u$C \w$R \$ $C"
+  . .bashrc
+}
+
+lambda() {
+  export PS1="$B\u$C \w$R λ $C"
+  . .bashrc
+}
+
 # If the bucket directory doesn't exist, create it
 if [[ ! -d "/usr/local/bucket" ]]; then
   mkdir /usr/local/bucket
@@ -184,7 +194,7 @@ B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$B\u$C \w$R λ $C"
+PS1
 
 # Set alias for hub
 eval "$(hub alias -s)"
