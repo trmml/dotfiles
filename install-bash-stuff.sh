@@ -31,4 +31,5 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Gemfile >/dev/
 rake
 cd ..
 rm -r .something
+. .bashrc
 echo "dotfiles have been updated"
