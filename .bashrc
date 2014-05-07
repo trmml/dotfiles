@@ -193,7 +193,7 @@ B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
 # Custom PS1
-export PS1="$B\u$C \w $Rλ$C "
+export PS1="$B\u$C \w $R\λ$C "
 
 # Set alias for hub
 eval "$(hub alias -s)"
