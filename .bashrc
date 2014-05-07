@@ -12,7 +12,6 @@ update() {
   brew cleanup
   rvm get stable
   rvm reload
-  n latest
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   npm update npm -g
   npm update -gs
@@ -85,10 +84,6 @@ install_keybase() {
   keybase-installer
 }
 
-install_n() {
-  npm install -g n
-}
-
 install_hub() {
   brew install hub
 }
@@ -149,10 +144,6 @@ install_package
 
 package="keybase-installer"
 function="install_keybase"
-install_package
-
-package="n"
-function="install_n"
 install_package
 
 package="hub"
