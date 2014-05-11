@@ -88,10 +88,6 @@ install_hub() {
   brew install hub
 }
 
-install_pry() {
-  gem install pry
-}
-
 install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
@@ -152,10 +148,6 @@ install_package
 
 package="hub"
 function="install_hub"
-install_package
-
-package="pry"
-function="install_pry"
 install_package
 
 # Reset variables
