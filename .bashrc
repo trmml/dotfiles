@@ -164,6 +164,21 @@ if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
 
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable Dashboard
+# defaults write com.apple.dashboard mcx-disabled -bool true
+
+# Don’t show Dashboard as a Space
+# defaults write com.apple.dock dashboard-in-overlay -bool true
+
 # Add autocomplete for Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
