@@ -173,6 +173,18 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Don’t prompt for confirmation before downloading
+defaults write org.m0k.transmission DownloadAsk -bool false
+
+# Trash original torrent files
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+# Hide the donate message
+defaults write org.m0k.transmission WarningDonate -bool false
+
+# Hide the legal disclaimer
+defaults write org.m0k.transmission WarningLegal -bool false
+
 # Disable Dashboard
 # defaults write com.apple.dashboard mcx-disabled -bool true
 
