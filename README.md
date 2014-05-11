@@ -15,6 +15,6 @@ $ curl -Ls http://git.io/c9yaXQ | sh
 ```
 
 ## Credits
-- [some `.aliases` files](https://github.com/mathiasbynens/dotfiles/blob/master/.aliases) thanks to [Mathias Bynens](https://github.com/mathiasbynens)
+- [some `.aliases`](https://github.com/mathiasbynens/dotfiles/blob/master/.aliases) and [`.osx` files](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) thanks to [Mathias Bynens](https://github.com/mathiasbynens)
 - [Base16 Terminal Theme](http://git.io/S04dtg) thanks to [Steven Haddox](https://github.com/stevenhaddox)
 - [Dracula Terminal Theme](https://atom.io/packages/dracula-theme#terminalapp) thanks to [Zeno Rocha](https://github.com/zenorocha)
