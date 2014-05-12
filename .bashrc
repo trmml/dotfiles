@@ -222,8 +222,11 @@ export PS1="$B\u$C \w$R λ $C"
 # Set alias for hub
 eval "$(hub alias -s)"
 
-# Set alias for imgurr
+# Set alias for `imgurr`
 alias imgur="imgurr"
+
+# Set colorful alias for `git status`
+alias "git status"="git status -sb"
 
 # Reset variables
 R=
