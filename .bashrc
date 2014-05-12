@@ -185,6 +185,12 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Add `killall` tab completion for common apps
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
+
 # Disable Dashboard
 # defaults write com.apple.dashboard mcx-disabled -bool true
 
