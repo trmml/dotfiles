@@ -222,6 +222,9 @@ export PS1="$B\u$C \w$R λ $C"
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Set betty alias
+alias betty="~/Dropbox/Developer/random stuff/betty/main.rb"
+
 # Set alias for `imgurr`
 alias imgur="imgurr"
 
