@@ -200,16 +200,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Add autocomplete for Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
-
-# Load NVM
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-
-# Export to PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/bucket:$PATH
-
 # Colors
 R="\[\033[0;31m\]" # red
 G="\[\033[0;32m\]" # green
@@ -235,6 +225,16 @@ W=
 # Make Terminal colorful
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Export to PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bucket:$PATH
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# Load NVM
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
