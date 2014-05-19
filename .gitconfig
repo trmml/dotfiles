@@ -1,9 +1,9 @@
-[alias]
-  status = status -sb
 [user]
-	name = trommel
-	email = joshception@icloud.com
+  name  = Josh
+  email = joshception@icloud.com
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
+[alias]
+  status = status -sb
