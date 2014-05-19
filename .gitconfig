@@ -3,10 +3,10 @@
   email = joshception@icloud.com
   
 [credential]
-	helper = osxkeychain
-	
+  helper = osxkeychain
+  
 [push]
-	default = simple
-	
+  default = simple
+  
 [alias]
   status = status -sb
