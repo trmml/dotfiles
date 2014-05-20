@@ -21,6 +21,7 @@ update() {
   gem update --system
   gem update
   rvm requirements
+  heroku update
   keybase-installer
   . .bashrc
   cd $cwd
