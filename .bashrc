@@ -25,9 +25,9 @@ update() {
   keybase-installer
   . .bashrc
   cd $cwd
-  #pip install --upgrade setuptools
-  #pip install --upgrade pip
-  #pip-review --auto
+  pip install --upgrade setuptools
+  pip install --upgrade pip
+  pip-review --auto
   #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
   #rm -rf ~/Library/Application\ Support/Alcatraz
 }
