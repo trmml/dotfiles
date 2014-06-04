@@ -11,3 +11,6 @@
 [alias]
   status = status -sb
   # make an alias for this maybe => git push origin --delete [ branch name ] => this deletes remote branches
+  
+[url "https://"]
+	insteadOf = git://
