@@ -35,7 +35,7 @@ update() {
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
-to
+
 install_rvm() {
   \curl -L https://get.rvm.io | bash -s stable --ruby
 }
