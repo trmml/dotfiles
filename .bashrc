@@ -35,7 +35,7 @@ update() {
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
-
+to
 install_rvm() {
   \curl -L https://get.rvm.io | bash -s stable --ruby
 }
@@ -56,13 +56,13 @@ install_cmatrix() {
   brew install cmatrix
 }
 
-install_cowsay() {
-  brew install cowsay
-}
+# install_cowsay() {
+#   brew install cowsay
+# }
 
-install_toilet() {
-  brew install toilet
-}
+# install_toilet() {
+#   brew install toilet
+# }
 
 install_wget() {
   brew install wget
@@ -119,13 +119,13 @@ package="cmatrix"
 function="install_cmatrix"
 install_package
 
-package="cowsay"
-function="install_cowsay"
-install_package
+# package="cowsay"
+# function="install_cowsay"
+# install_package
 
-package="toilet"
-function="install_cowsay"
-install_package
+# package="toilet"
+# function="install_cowsay"
+# install_package
 
 package="wget"
 function="install_wget"
