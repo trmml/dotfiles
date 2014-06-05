@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'cocoapods'
 gem 'hub'
+gem 'heroku'
 gem 'rubygems-update'
 gem 'sass'
 gem 'sinatra'
