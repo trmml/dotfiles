@@ -14,6 +14,7 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bash_profile 
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bashrc >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.aliases >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.gitconfig >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.vimrc >/dev/null 2>&1
 
 cd $currentdir
 source ~/.bash_profile
@@ -32,5 +33,5 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Gemfile >/dev/
 rake
 cd ..
 rm -r .something
-. .bashrc
+. .bash_profile
 echo "dotfiles have been updated"
