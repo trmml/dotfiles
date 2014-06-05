@@ -207,6 +207,7 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # Export to PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
+export PATH=/usr/local/bin/keybase:$PATH
 
 # Colors
 R="\[\033[0;31m\]" # red
