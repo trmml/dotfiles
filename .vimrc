@@ -1,2 +1,2 @@
-show number
+set number
 set mouse=a
