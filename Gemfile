@@ -11,3 +11,9 @@ gem 'rails'
 gem 'rainbow'
 gem 'twitter'
 gem 't'
+
+# my gems
+gem 'rarse'
+gem 'reddinfo'
+gem 'elementic'
+gem 'unswear'
