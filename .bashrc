@@ -135,9 +135,9 @@ package="tree"
 function="install_tree"
 install_package
 
-package="bower"
-function="install_bower"
-install_package
+# package="bower"
+# function="install_bower"
+# install_package
 
 package="coffee"
 function="install_coffee"
