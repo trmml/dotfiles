@@ -72,9 +72,9 @@ install_tree() {
   brew install tree
 }
 
-install_bower() {
-  npm install -g bower
-}
+# install_bower() {
+#   npm install -g bower
+# }
 
 install_coffee() {
   npm install -g coffee-script
