@@ -227,6 +227,9 @@ alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
 # Set alias for `imgurr`
 alias imgur="imgurr"
 
+# Set alias for `arrg`
+alias pirate=arrg
+
 # Reset variables
 R=
 W=
