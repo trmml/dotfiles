@@ -215,10 +215,13 @@ G="\[\033[0;32m\]" # green
 B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
-__git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-LAMBDA='λ'
+# __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+# LAMBDA='λ'
+# # Custom PS1
+# export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
+
 # Custom PS1
-export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
+export PS1="$B\u$C \w$R λ $C"
 
 # Set alias for hub
 eval "$(hub alias -s)"
