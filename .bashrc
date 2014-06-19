@@ -239,7 +239,8 @@ alias pirate=arrg
 R=
 W=
 
-# Set GOPATH
+# Set GOPATH and add it to $PATH
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Make Terminal colorful
