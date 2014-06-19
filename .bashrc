@@ -239,6 +239,9 @@ alias pirate=arrg
 R=
 W=
 
+# Set GOPATH
+export PATH=$PATH:$GOPATH/bin
+
 # Make Terminal colorful
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
