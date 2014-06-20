@@ -242,7 +242,7 @@ W=
 if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
   mkdir -p "$HOME/go/src/github.com/trommel"
   echo "$HOME/go/src/github.com/trommel has been created"
-done
+fi
 
 # Set GOPATH and add it to $PATH
 export GOPATH=$HOME/go
