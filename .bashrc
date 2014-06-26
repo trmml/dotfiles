@@ -5,7 +5,7 @@ update() {
   cwd=$(pwd)
   cd ~
   #sudo softwareupdate -i -a -v
-  curl -Ls http://git.io/c9yaXQ | sha
+  curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
   brew prune
