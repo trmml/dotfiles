@@ -214,6 +214,20 @@ export PATH=/usr/local/bin/keybase:$PATH
 # # Custom PS1
 # export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
 
+# Colors
+R="\[\033[0;31m\]" # red
+G="\[\033[0;32m\]" # green
+B="\[\033[0;34m\]" # blue
+C="\[\033[0;39m\]" # clear
+
+# Custom PS1
+export PS1="$B\u$C \w$R λ $C"
+
+# Reset variables
+R=
+W=
+
+
 if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
   mkdir -p "$HOME/go/src/github.com/trommel"
   echo "$HOME/go/src/github.com/trommel has been created"
@@ -226,11 +240,6 @@ export PATH=$PATH:$GOPATH/bin
 # Make Terminal colorful
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# Reset variables
-R=
-W=
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
