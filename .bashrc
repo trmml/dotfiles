@@ -5,7 +5,7 @@ update() {
   cwd=$(pwd)
   cd ~
   #sudo softwareupdate -i -a -v
-  curl -Ls http://git.io/c9yaXQ | sh
+  curl -Ls http://git.io/c9yaXQ | sha
   brew update
   brew upgrade
   brew prune
@@ -209,35 +209,10 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
 export PATH=/usr/local/bin/keybase:$PATH
 
-# Colors
-R="\[\033[0;31m\]" # red
-G="\[\033[0;32m\]" # green
-B="\[\033[0;34m\]" # blue
-C="\[\033[0;39m\]" # clear
-
 # __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 # LAMBDA='λ'
 # # Custom PS1
 # export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
-
-# Custom PS1
-export PS1="$B\u$C \w$R λ $C"
-
-# Set alias for hub
-eval "$(hub alias -s)"
-
-# Set betty alias
-alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
-
-# Set alias for `imgurr`
-alias imgur="imgurr"
-
-# Set alias for `arrg`
-alias pirate=arrg
-
-# Reset variables
-R=
-W=
 
 if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
   mkdir -p "$HOME/go/src/github.com/trommel"
