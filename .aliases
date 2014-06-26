@@ -1,5 +1,36 @@
+# Colors
+R="\[\033[0;31m\]" # red
+G="\[\033[0;32m\]" # green
+B="\[\033[0;34m\]" # blue
+C="\[\033[0;39m\]" # clear
+
+# Reset variables
+R=
+W=
+
+# Custom PS1
+export PS1="$B\u$C \w$R λ $C"
+
+# Set alias for hub
+eval "$(hub alias -s)"
+
+# Set betty alias
+alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
+
+# Set alias for `imgurr`
+alias imgur="imgurr"
+
+# Set alias for `arrg`
+alias pirate=arrg
+
 # Make `ls` colourful
 alias ls="ls -FG"
+
+# Clear
+alias cls='clear'
+
+# Make `tree` better
+alias tree='tree -Ca -I ".git|.svn|*.pyc|*.swp"'
 
 # Make sure I don't accidentally open irb again
 alias irb="pry"
