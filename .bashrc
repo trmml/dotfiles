@@ -227,6 +227,11 @@ export PATH=$PATH:$GOPATH/bin
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Reset variables
+R=
+W=
+
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Load RVM into a shell session *as a function*
