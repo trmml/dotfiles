@@ -29,8 +29,9 @@ if [ -d ".something" ]; then
 fi
 mkdir .something
 cd .something
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Rakefile >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/Gemfile >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Brewfile >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Rakefile >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Gemfile >/dev/null 2>&1
 rake
 cd ..
 rm -r .something
