@@ -19,5 +19,9 @@
   delete-remote-branch = push origin --delete
   list = ls-files
   ls = ls-files
+  push-initial = push --set-upstream origin master
+  push-init = push --set-upstream origin master
+  push-first = push --set-upstream origin master
+  push-original = push --set-upstream origin master
   root = rev-parse --show-toplevel
   log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
