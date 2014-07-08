@@ -1,0 +1,23 @@
+[user]
+  name  = Josh
+  email = joshception@icloud.com
+
+[credential]
+  helper = osxkeychain
+
+[push]
+  default = simple
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[alias]
+  status = status -sb
+  delete-remote-branch = push origin --delete
+  list = ls-files
+  ls = ls-files
+  root = rev-parse --show-toplevel
+  log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
