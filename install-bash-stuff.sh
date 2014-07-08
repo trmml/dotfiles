@@ -10,12 +10,12 @@ cd ~
  echo '
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting' > ~/.profile
 
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bash_profile >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.bashrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.aliases >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.gitconfig >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.vimrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/.gemrc >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bash_profile >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bashrc >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.aliases >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gitconfig >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.vimrc >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gemrc >/dev/null 2>&1
 
 cd $currentdir
 source ~/.bash_profile
