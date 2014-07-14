@@ -19,7 +19,7 @@ $ curl -Ls http://git.io/c9yaXQ | sh
 ```
 
 ## Credits
-I didn't actually code most of this.
+I didn't actually code most of this.<br>
 ![http://i.imgur.com/7V6hdfQ.jpg](http://i.imgur.com/7V6hdfQ.jpg)
 
 ### Dotfiles
