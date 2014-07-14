@@ -1,10 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-syntax enable
-set number
-colorscheme lucario
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -29,6 +25,8 @@ Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 Plugin 'user/L9', {'name': 'newL9'}
+" Install Lucario theme
+" Plugin 'raphamorim/lucario', {'name': 'lucario'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,3 +42,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+syntax enable
+set number
+colorscheme lucario
