@@ -25,6 +25,7 @@ update() {
   pip install --upgrade pip
   heroku update
   keybase-installer
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   . .bashrc
   cd $cwd
   #pip-review --auto
@@ -165,26 +166,6 @@ if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
 
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell

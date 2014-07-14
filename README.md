@@ -25,3 +25,4 @@ $ curl -Ls http://git.io/c9yaXQ | sh
 - [xhinking alfred theme](https://github.com/xhinking/Alfred/blob/master/xhinking.alfredappearance) by [xhinkig](xhinking) (I modded it a bit)
 - [some `.gitconfig` stuff](https://github.com/sontek/dotfiles/blob/master/_gitconfig) thanks to [John Anderson](https://github.com/sontek)
 - [some `.gitconfig` stuff](https://github.com/brauliobo/gitconfig/tree/master/configs) thanks to [Bráulio Bhavamitra](https://github.com/brauliobo)
+- I'm using [Vundle](https://github.com/gmarik/Vundle.vim) (made by [gmarik](https://github.com/gmarik)) to manage my Vim stuff

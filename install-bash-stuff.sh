@@ -16,6 +16,7 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.alias
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gitconfig >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.vimrc >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gemrc >/dev/null 2>&1
+curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.osx >/dev/null 2>&1
 
 cd $currentdir
 source ~/.bash_profile
