@@ -18,7 +18,7 @@ curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.vimrc
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gemrc >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.osx >/dev/null 2>&1
 
-cd $currentdir
+cd "$currentdir"
 source ~/.bash_profile
 if [ ! gem spec rake > /dev/null 2>&1 ]; then
   gem install rake
