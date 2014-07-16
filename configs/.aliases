@@ -22,6 +22,9 @@ alias tree='tree -Ca -I ".git|.svn|*.pyc|*.swp"'
 # Make sure I don't accidentally open irb again
 alias irb="pry"
 
+# Becuase I can't even remember the -a argument
+alias shasum-256="shasum -a 256"
+
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
