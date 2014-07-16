@@ -223,7 +223,7 @@ function copy_formula () {
      echo "You need to specify a Cask."
    else
      cp "$CASKS_PATH"/"$1.rb" \
-     "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
+       "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
      $current_dir=$(pwd)
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
      git add "Casks/$1.rb"
