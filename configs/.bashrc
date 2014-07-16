@@ -222,7 +222,7 @@ function copy_formula () {
    then
      echo "You need to specify a Cask."
    else
-     $current_dir=$(pwd)
+     current_dir=$(pwd)
      cp "$CASKS_PATH"/"$1.rb" \
        "$HOME/Dropbox/Developer/random\ stuff/homebrew-cask/Casks"
      cd "$HOME/Dropbox/Developer/random\ stuff/homebrew-cask"
