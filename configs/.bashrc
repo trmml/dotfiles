@@ -8,6 +8,7 @@ update() {
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
+  brew upgrade
   brew prune
   brew cleanup
   rvm get stable
