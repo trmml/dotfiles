@@ -226,8 +226,8 @@ function copy_formula () {
      "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
      $current_dir = $(pwd)
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
-     git add "$1.rb"
-     git commit -m "added $1.rb"
+     git add "Casks/$1.rb"
+     git commit -m "added $1.rb to Casks/"
      git push
      cd $current_dir
      current_dir="" # reset! that!! variable!!!
