@@ -16,6 +16,9 @@ alias ls="ls -FG"
 # Clear
 alias cls='clear'
 
+# Cask Namer
+alias cask-namer="$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer"
+
 # Make `tree` better
 alias tree='tree -Ca -I ".git|.svn|*.pyc|*.swp"'
 
