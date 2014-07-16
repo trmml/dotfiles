@@ -228,7 +228,7 @@ function copy_formula () {
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
      git add "$1.rb"
      git commit -m "added $1.rb"
-     git push -f # just in case
+     git push
      cd $current_dir
      current_dir="" # reset! that!! variable!!!
    fi
