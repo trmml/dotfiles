@@ -224,8 +224,8 @@ function copy_formula () {
    else
      current_dir=$(pwd)
      cp "$CASKS_PATH"/"$1.rb" \
-       "$HOME/Dropbox/Developer/random\ stuff/homebrew-cask/Casks"
-     cd "$HOME/Dropbox/Developer/random\ stuff/homebrew-cask"
+       "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
+     cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
      git add "Casks/$1.rb"
      git commit -m "added $1.rb to Casks/"
      git push
