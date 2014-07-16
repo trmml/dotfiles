@@ -224,6 +224,13 @@ function copy_formula () {
    else
      cp "$CASKS_PATH"/"$1.rb" \
      "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
+     $current_dir = $(pwd)
+     cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
+     git add "$1.rb"
+     git commit -m "added $1.rb"
+     git push -f # just in case
+     cd $current_dir
+     current_dir="" # reset! that!! variable!!!
    fi
 }
 
