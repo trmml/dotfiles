@@ -213,6 +213,20 @@ C="\[\033[0;39m\]" # clear
 # Custom PS1
 export PS1="$B\u$C \w$R λ $C"
 
+# Casks Path
+export CASKS_PATH="/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/"
+
+# Copy formula to my forked version
+function copy_formula () {
+  if [ -z "$1" ]
+   then
+     echo "You need to specify a Cask."
+   else
+     cp "$CASKS_PATH"/"$1.rb" \
+     "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
+   fi
+}
+
 # Reset variables
 R=
 W=
