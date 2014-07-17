@@ -8,9 +8,11 @@ update() {
   curl -Ls http://git.io/c9yaXQ | sh
   brew update
   brew upgrade
-  brew upgrade
   brew prune
   brew cleanup
+  brew cask cleanup
+  brew doctor
+  brew cask doctor
   rvm get stable
   rvm reload
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
