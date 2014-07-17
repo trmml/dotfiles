@@ -16,6 +16,8 @@
 
 [alias]
   status = status -sb
+  st = status
+  b = branch
   delete-remote-branch = push origin --delete
   list = ls-files
   ls = ls-files
