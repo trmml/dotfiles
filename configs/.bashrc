@@ -217,11 +217,20 @@ export PS1="$B\u$C \w$R λ $C"
 export CASKS_PATH="/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/"
 
 # Copy formula to my forked version
-function copy_formula () {
-  if [ -z "$1" || -z "$2" ]
+function copy_formula() {
+
+  function help() {
+    echo "You need to specify a Cask and a small amount of commit information."
+    echo "ie: copy_formula popcorn-time \"[added|fixed] popcorn-time\""
+  }
+
+  # since bash is being weird
+  # and won't let me do multiple if conditions
+  if [ -z "$1" ]; then
    then
-     echo "You need to specify a Cask and a small amount of commit information."
-     echo "ie: copy_formula popcorn-time \"[added|fixed] popcorn-time\""
+     help
+   elif [ -z "$2" ]; then
+     help
    else
      current_dir=$(pwd)
      cp "$CASKS_PATH"/"$1.rb" \
