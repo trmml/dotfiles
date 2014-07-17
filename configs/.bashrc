@@ -227,7 +227,6 @@ function copy_formula() {
   # since bash is being weird
   # and won't let me do multiple if conditions
   if [ -z "$1" ]; then
-   then
      help
    elif [ -z "$2" ]; then
      help
