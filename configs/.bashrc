@@ -218,16 +218,26 @@ export CASKS_PATH="/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/"
 
 # Copy formula to my forked version
 function copy_formula () {
-  if [ -z "$1" ]
+  if [ -z "$1" || -z "$2" ]
    then
-     echo "You need to specify a Cask."
+     echo "You need to specify a Cask and a small amount of commit information."
+     echo "ie: copy_formula popcorn-time \"[added|fixed] popcorn-time\""
    else
      current_dir=$(pwd)
      cp "$CASKS_PATH"/"$1.rb" \
        "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
      git add "Casks/$1.rb"
-     git commit -m "added $1.rb to Casks/"
+
+     if [[ "$1" == "added" ]]; then
+       message="added $1 to Casks/"
+     elif [[ "$2" == "fixed" ]]; then
+       message="fixed $1"
+     else
+       message="I don't know"
+     fi
+
+     git commit -m "$message"
      git push
      cd $current_dir
      current_dir="" # reset! that!! variable!!!
