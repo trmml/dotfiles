@@ -257,7 +257,7 @@ function copy_formula() {
 # Makes a directory
 # and `cd`s into it
 function mkdir-cd () {
-  mkidr "$1"
+  mkdir "$1"
   cd "$1"
 }
 
