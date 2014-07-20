@@ -254,6 +254,13 @@ function copy_formula() {
    fi
 }
 
+# Makes a directory
+# and `cd`s into it
+function mkdir-cd () {
+  mkidr "$1"
+  cd "$1"
+}
+
 # Reset variables
 R=
 W=
