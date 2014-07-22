@@ -256,10 +256,10 @@ function copy_formula() {
 
 # Makes a directory
 # and `cd`s into it
-function mkdir-cd () {
-  mkdir "$1"
-  cd "$1"
-}
+# function mkdir-cd () {
+#   mkdir "$1"
+#   cd "$1"
+# }
 
 # Reset variables
 R=
