@@ -63,13 +63,13 @@ install_cmatrix() {
   brew install cmatrix
 }
 
-# install_cowsay() {
-#   brew install cowsay
-# }
+install_cowsay() {
+  brew install cowsay
+}
 
-# install_toilet() {
-#   brew install toilet
-# }
+install_toilet() {
+  brew install toilet
+}
 
 install_wget() {
   brew install wget
@@ -79,9 +79,9 @@ install_tree() {
   brew install tree
 }
 
-# install_bower() {
-#   npm install -g bower
-# }
+install_bower() {
+  npm install -g bower
+}
 
 install_coffee() {
   npm install -g coffee-script
@@ -126,13 +126,13 @@ package="cmatrix"
 function="install_cmatrix"
 install_package
 
-# package="cowsay"
-# function="install_cowsay"
-# install_package
+package="cowsay"
+function="install_cowsay"
+install_package
 
-# package="toilet"
-# function="install_cowsay"
-# install_package
+package="toilet"
+function="install_cowsay"
+install_package
 
 package="wget"
 function="install_wget"
@@ -142,9 +142,9 @@ package="tree"
 function="install_tree"
 install_package
 
-# package="bower"
-# function="install_bower"
-# install_package
+package="bower"
+function="install_bower"
+install_package
 
 package="coffee"
 function="install_coffee"
@@ -171,7 +171,6 @@ fi
 if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
-
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
@@ -252,6 +251,13 @@ function copy_formula() {
      cd $current_dir
      current_dir="" # reset! that!! variable!!!
    fi
+}
+
+function test-gem() {
+  yes | gem uninstall "$1"
+  gem build *gemspec*
+  gem install ./"$1*gem"
+  rm "$1*gem"
 }
 
 # Makes a directory
