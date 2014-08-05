@@ -256,8 +256,8 @@ function copy_formula() {
 function test_gem() {
   yes | gem uninstall "$1"
   gem build *gemspec*
-  gem install ./"$1*gem"
-  rm "$1*gem"
+  gem install ./*gem
+  rm *gem
 }
 
 # Makes a directory
