@@ -131,7 +131,7 @@ install_package
 # install_package
 #
 # package="toilet"
-# function="install_cowsay"
+# function="install_toilet"
 # install_package
 
 package="wget"
