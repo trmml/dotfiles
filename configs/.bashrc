@@ -63,13 +63,13 @@ install_cmatrix() {
   brew install cmatrix
 }
 
-install_cowsay() {
-  brew install cowsay
-}
-
-install_toilet() {
-  brew install toilet
-}
+# install_cowsay() {
+#   brew install cowsay
+# }
+#
+# install_toilet() {
+#   brew install toilet
+# }
 
 install_wget() {
   brew install wget
@@ -126,13 +126,13 @@ package="cmatrix"
 function="install_cmatrix"
 install_package
 
-package="cowsay"
-function="install_cowsay"
-install_package
-
-package="toilet"
-function="install_cowsay"
-install_package
+# package="cowsay"
+# function="install_cowsay"
+# install_package
+#
+# package="toilet"
+# function="install_cowsay"
+# install_package
 
 package="wget"
 function="install_wget"
@@ -253,7 +253,7 @@ function copy_formula() {
    fi
 }
 
-function test-gem() {
+function test_gem() {
   yes | gem uninstall "$1"
   gem build *gemspec*
   gem install ./"$1*gem"
