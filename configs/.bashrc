@@ -238,7 +238,7 @@ function copy_formula() {
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
      git add "Casks/$1.rb"
 
-     if [[ "$1" == "added" ]]; then
+     if [[ "$2" == "added" ]]; then
        message="added $1 to Casks/"
      elif [[ "$2" == "fixed" ]]; then
        message="fixed $1"
