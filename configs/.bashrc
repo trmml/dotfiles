@@ -194,6 +194,7 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/bucket:$PATH
 export PATH=/usr/local/bin/keybase:$PATH
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 # LAMBDA='λ'
