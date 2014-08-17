@@ -7,8 +7,6 @@ if [[ ! -d "/usr/local/bucket" ]]; then
 fi
 
 cd ~
- echo '
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting' > ~/.profile
 
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bash_profile >/dev/null 2>&1
 curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bashrc >/dev/null 2>&1
