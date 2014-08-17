@@ -163,9 +163,9 @@ package=
 function=
 
 # If the bucket directory doesn't exist, create it
-if [[ ! -d "/usr/local/bucket" ]]; then
-  mkdir /usr/local/bucket
-fi
+# if [[ ! -d "/usr/local/bucket" ]]; then
+#   mkdir /usr/local/bucket
+# fi
 
 # If .hushlogin doesn't exist, create it
 if [[ ! -f "~/.hushlogin" ]]; then
@@ -196,24 +196,23 @@ export PATH=/usr/local/bucket:$PATH
 export PATH=/usr/local/bin/keybase:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-# __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-# LAMBDA='λ'
-# # Custom PS1
-# export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
-
 # Colors
 R="\[\033[0;31m\]" # red
 G="\[\033[0;32m\]" # green
 B="\[\033[0;34m\]" # blue
 C="\[\033[0;39m\]" # clear
 
+# Lambda variable, obviously
+LAMBDA='λ'
+
+# Get current Git branch in Simple English
 # __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-# LAMBDA='λ'
-# # Custom PS1
-# export PS1="$B\u$C \w $G$__git_branch$R$LAMBDA $C"
+
+# Custom PS1 (with Git branch in Simple English)
+# export PS1="$B\u$C \w $G$__git_branch$C$R$LAMBDA $C"
 
 # Custom PS1
-export PS1="$B\u$C \w$R λ $C"
+export PS1="$B\u$C \w$R $LAMBDA $C"
 
 # Casks Path
 export CASKS_PATH="/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/"
@@ -289,3 +288,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
