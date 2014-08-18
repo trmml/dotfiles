@@ -1,6 +1,10 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Make cp and mv always have progress bars
+alias cp='cp -g'
+alias mv='mv -g'
+
 # Set betty alias
 alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
 
