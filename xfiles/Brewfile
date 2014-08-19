@@ -1,14 +1,6 @@
-install vim
-install bash
-instal cmatrix
-install cowsay
-install git
-install hr
-install hub
-install node
-install python
-install toilet
-install tree
-install wget
-link --force git
-link --force python
+install vim bash cmatrix cowsay git python
+install hr hub node toilet tree wget
+link --force git python
+
+cask install alfred atom cheatsheet dash dropbox filezilla flux google-chrome hive minecraft
+cask install onyx popcorn-time silverlight spotify steam torbrowser transmission unrarx vlc
