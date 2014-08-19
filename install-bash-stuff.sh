@@ -1,39 +1,40 @@
 #!/bin/bash
 
-currentdir=$(pwd)
+# Clone the dotfiles repo and `cd` into it
+git clone https://github.com/trommel/dotfiles
+cd dotfiles/
 
-if [[ ! -d "/usr/local/bucket" ]]; then
-  mkdir /usr/local/bucket
-fi
+# Enable copying all dotfiles from a directory, easily
+shopt -s dotglob nullglob
 
-cd ~
+# Move all of the config files to the home directory
+mv configs/* ~
 
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bash_profile >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.bashrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.aliases >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gitconfig >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.vimrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.gemrc >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/configs/.osx >/dev/null 2>&1
+# Make sure everything is up to date now
+source .bash_profile
 
-cd "$currentdir"
-source ~/.bash_profile
+# Make sure everything is installed
+# by running the update function
+# (which is defined in .bashrc)
+update
+
+# If Rake isn't installed, install it
 if [ ! gem spec rake > /dev/null 2>&1 ]; then
   gem install rake
 fi
 
-# Essentially installs all the gems
-if [ -d ".something" ]; then
-  rm -r .something
-fi
-mkdir .something
-cd .something
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Brewfile >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Rakefile >/dev/null 2>&1
-curl -O https://raw.githubusercontent.com/trommel/dotfiles/master/xfiles/Gemfile >/dev/null 2>&1
-rake
-cd ..
-rm -r .something
-. ~/.bash_profile
-. ~/.bashrc
+# `cd` into the general files directory
+cd xfiles/
+
+# Install everything from the general files
+brew bundle
+bundle install
+
+# Get out of the dotfiles directory..
+cd ../../
+
+# ..and remove it
+yes | rm -r dotfiles/
+
+# Tell the user that everything is going to be OK
 echo "dotfiles have been updated"
