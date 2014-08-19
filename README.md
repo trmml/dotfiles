@@ -14,6 +14,16 @@ $ [sudo] gem install rake
 For installing the dotfiles, I made an easy script, since
 I prefer easy things
 
+run this first
+```bash
+$ curl -Ls http://git.io/awp0-Q | sh
+```
+
+which just grabs the `.bashrc` file because grabbing it first makes
+things easier later. once that has finished, close your Terminal app :P
+
+then you can run this
+
 ```bash
 $ curl -Ls http://git.io/c9yaXQ | sh
 ```
