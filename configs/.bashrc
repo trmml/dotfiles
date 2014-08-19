@@ -18,7 +18,7 @@ update() {
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
   npm update npm -g
   npm update -gs
-  apm upgrade
+  yes | apm upgrade
   update_rubygems
   gem update
   gem update --system
@@ -288,4 +288,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
