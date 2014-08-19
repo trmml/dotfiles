@@ -1,5 +1,5 @@
 install vim bash cmatrix cowsay git python
-install hr hub toilet tree wget
+install hr hub toilet tree wget youtube-dl
 install node --without-npm
 link --force git python
 
