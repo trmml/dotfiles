@@ -11,7 +11,7 @@ shopt -s dotglob nullglob
 mv configs/* ~
 
 # Make sure everything is up to date now
-source .bash_profile
+source ~/.bash_profile
 
 # Make sure everything is installed
 # by running the update function
