@@ -5,7 +5,7 @@ update() {
   cwd=$(pwd)
   cd ~
   #sudo softwareupdate -i -a -v
-  curl -Ls http://git.io/c9yaXQ | sh
+  if [[ ! "$1" == "--without-dotfiles-stuff" ]]; then curl -Ls http://git.io/c9yaXQ | sh; fi
   brew update
   brew upgrade
   brew prune
