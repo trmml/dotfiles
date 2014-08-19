@@ -4,7 +4,7 @@
 if [ -d "dotfiles" ]; then yes | rm -r dotfiles/; fi
 
 # Clone the dotfiles repo and `cd` into it
-git clone https://github.com/trommel/dotfiles --quiet
+git clone https://github.com/trommel/dotfiles
 echo "dotfiles/ directory successfully cloned"
 cd dotfiles/
 echo "changed into the dotfiles/ directory"
