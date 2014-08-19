@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# If the dotfiles repo already exists, remove it
+if [[ -d "dotfiles" ]]; then yes | rm -r dotfiles/; fi
+
 # Clone the dotfiles repo and `cd` into it
 git clone https://github.com/trommel/dotfiles
 cd dotfiles/
