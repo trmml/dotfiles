@@ -24,7 +24,7 @@ echo "sourced ~/.bash_profile"
 # by running the update function
 # (which is defined in .bashrc)
 echo "starting to update everything"
-update
+update --without-dotfiles-stuff # because we've already established the dotfiles stuff
 echo "update complete"
 
 # If Rake isn't installed, install it
