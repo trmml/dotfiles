@@ -19,9 +19,7 @@ source .bash_profile
 update
 
 # If Rake isn't installed, install it
-if [ ! gem spec rake > /dev/null 2>&1 ]; then
-  gem install rake
-fi
+if [ ! gem spec rake > /dev/null 2>&1 ]; then gem install rake; fi
 
 # `cd` into the general files directory
 cd xfiles/
