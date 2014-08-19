@@ -27,6 +27,9 @@ echo "starting to update everything"
 update --without-dotfiles-stuff # because we've already established the dotfiles stuff
 echo "update complete"
 
+# Tap my own cask so that I have access to my custom Casks
+brew tap trommel/cask
+
 # If Rake isn't installed, install it
 if [ ! gem spec rake > /dev/null 2>&1 ]; then gem install rake; fi
 
