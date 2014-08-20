@@ -27,6 +27,9 @@ echo "starting to update everything"
 update --without-dotfiles-stuff # because we've already established the dotfiles stuff
 echo "update complete"
 
+# Install Homebrew Cask
+brew install caskroom/cask/brew-cask
+
 # Tap my own cask so that I have access to my custom Casks
 brew tap trommel/cask
 
