@@ -1,106 +1,149 @@
-# Define some functions
-
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
+  
+  # Get current directory for later
   cwd=$(pwd)
+  
+  # `cd` into the home directory
   cd ~
-  #sudo softwareupdate -i -a -v
+  
+  # Update Apple (App Store, mostly) Stuff
+  # sudo softwareupdate -i -a -v
+  
+  # Update dotfiles unless the user specifies "--without-dotfiles-stuff" as an argument to the update function
   if [[ ! "$1" == "--without-dotfiles-stuff" ]]; then curl -Ls http://git.io/c9yaXQ | sh; fi
+  
+  # Update all Homebrew packages
   brew update
   brew upgrade
+  
+  # General Homebrew Cleanup
   brew prune
   brew cleanup
   brew cask cleanup
-  brew doctor
-  brew cask doctor
+  
+  # Update rvm
   rvm get stable
-  rvm reload
-  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-  npm update npm -g
-  npm update -gs
-  yes | apm upgrade
-  update_rubygems
-  gem update
-  gem update --system
-  gem update
+  
+  # Install rvm requirements (this should only really need to happen once, but I might as well put it in here)
   rvm requirements
-  pip install --upgrade setuptools
-  pip install --upgrade pip
+  
+  # Reload rvm
+  rvm reload
+  
+  # Install/Update Alcatraz
+  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+  
+  # Update global npm packages
+  npm update -g
+  
+  # Update Atom packages, and always say "yes" when asked if you would like to update said package/thing
+  yes | apm upgrade
+  
+  # Update RubyGems (not to be confused with the gems that are installed)
+  update_rubygems
+  
+  # Update Gems
+  gem update
+  
+  # Update Heroku
   heroku update
+  
+  # Install/Update Keybase's CLI
   keybase-installer
+  
+  # Install Vundle if it's not already installed
   if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
     echo "$HOME/.vim/bundle/Vundle.vim has been created"
   fi
-  . .bashrc
+  
+  # Source .bashrc
+  source .bashrc
+  
+  # `cd` back into the original directory
   cd $cwd
-  #pip-review --auto
-  #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
-  #rm -rf ~/Library/Application\ Support/Alcatraz
+  
+  # Update/Upgrade Pip
+  # pip install --upgrade pip
+  
+  # Update/Upgrade Pip's setuptools
+  # pip install --upgrade setuptools
+  
+  # Uninstall Alcatraz if the user specifies "--uninstall-alcatraz" as an argument to the update function
+  if [ "$1" == "--uninstall-alcatraz" ]; then
+    rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
+    rm -rf ~/Library/Application\ Support/Alcatraz
+  fi
 }
 
+# Install Brew
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
 
+# Install rvm
 install_rvm() {
   \curl -L https://get.rvm.io | bash -s stable --ruby
 }
 
+# Install Node (without npm)
 install_node() {
   brew install node --without-npm
 }
 
+# Install npm
 install_npm() {
   curl -L https://npmjs.org/install.sh | sh
 }
 
+# Install hr
 install_hr() {
   brew install hr
 }
 
+# Install cmatrix
 install_cmatrix() {
   brew install cmatrix
 }
 
-# install_cowsay() {
-#   brew install cowsay
-# }
-#
-# install_toilet() {
-#   brew install toilet
-# }
-
+# Install wget
 install_wget() {
   brew install wget
 }
 
+# Install tree
 install_tree() {
   brew install tree
 }
 
+# Install bower
 install_bower() {
   npm install -g bower
 }
 
+# Install coffeescript
 install_coffee() {
   npm install -g coffee-script
 }
 
+# Install the Keybase CLI
 install_keybase() {
   npm install -g keybase-installer
   keybase-installer
 }
 
+# Install Hub
 install_hub() {
   brew install hub
 }
 
+# Install `"$package"`
 install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
 }
 
-# If [ package ] isn't installed, install it
+# If `"$package"` isn't installed, install it
 
 package="brew"
 function="install_brew"
@@ -125,14 +168,6 @@ install_package
 package="cmatrix"
 function="install_cmatrix"
 install_package
-
-# package="cowsay"
-# function="install_cowsay"
-# install_package
-#
-# package="toilet"
-# function="install_toilet"
-# install_package
 
 package="wget"
 function="install_wget"
@@ -162,12 +197,7 @@ install_package
 package=
 function=
 
-# If the bucket directory doesn't exist, create it
-# if [[ ! -d "/usr/local/bucket" ]]; then
-#   mkdir /usr/local/bucket
-# fi
-
-# If .hushlogin doesn't exist, create it
+# Create ~/.hushlogin if it doesn't already exist
 if [[ ! -f "~/.hushlogin" ]]; then
   touch ~/.hushlogin
 fi
@@ -177,12 +207,6 @@ shopt -s cdspell
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
-
-# Disable Dashboard
-# defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-# defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Add autocomplete for Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
@@ -222,7 +246,7 @@ function copy_formula() {
 
   function help() {
     echo "You need to specify a Cask and a small amount of commit information."
-    echo "ie: copy_formula popcorn-time \"[added|fixed] popcorn-time\""
+    echo "ie: copy_formula \"[added|fixed] popcorn-time\""
   }
 
   # since bash is being weird
@@ -233,22 +257,24 @@ function copy_formula() {
      help
    else
      current_dir=$(pwd)
-     cp "$CASKS_PATH"/"$1.rb" \
+     cp "$CASKS_PATH"/"$2.rb" \
        "$HOME/Dropbox/Developer/random stuff/homebrew-cask/Casks"
      cd "$HOME/Dropbox/Developer/random stuff/homebrew-cask"
-     git add "Casks/$1.rb"
+     git add "Casks/$2.rb"
 
-     if [[ "$2" == "added" ]]; then
-       message="added $1 to Casks/"
-     elif [[ "$2" == "fixed" ]]; then
-       message="fixed $1"
+     if [[ "$1" == "added" ]]; then
+       message="added $2 to Casks/"
+     elif [[ "$1" == "fixed" ]]; then
+       message="fixed $2"
      else
        message="I don't know"
      fi
 
      git commit -m "$message"
+     git pull
      git push
      cd $current_dir
+     message="" # reset! that!! variable!!!
      current_dir="" # reset! that!! variable!!!
    fi
 }
@@ -260,17 +286,11 @@ function test_gem() {
   rm *gem
 }
 
-# Makes a directory
-# and `cd`s into it
-# function mkdir-cd () {
-#   mkdir "$1"
-#   cd "$1"
-# }
-
 # Reset variables
 R=
 W=
 
+# If the `"$GOPATH"` directories don't already exist, create them
 if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
   mkdir -p "$HOME/go/src/github.com/trommel"
   echo "$HOME/go/src/github.com/trommel has been created"
@@ -281,10 +301,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Make Terminal colorful
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# export CLICOLOR=1
+# export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
