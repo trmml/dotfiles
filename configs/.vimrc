@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set bs=2
+:set backspace=indent,eol,start
 syntax enable
 set number
 colorscheme lucario
