@@ -52,7 +52,7 @@ cd ../../
 echo "got out of the dotfiles/ directory"
 
 # ..and remove it
-yes | rm -r dotfiles/
+rm -rf dotfiles/
 echo "removed the dotfiles/ directory"
 
 # Tell the user that everything is going to be OK
