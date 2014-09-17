@@ -33,8 +33,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'user/L9', {'name': 'newL9'}
 " Install Lucario theme
 Plugin 'raphamorim/lucario', {'name': 'lucario'}
-" Install vim-gtfo plugin
-Plugin 'justinmk/vim-gtfo'
+" Install vim-gtfo plugin (it's not really working right now :/)
+" Plugin 'justinmk/vim-gtfo'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
