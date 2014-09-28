@@ -23,7 +23,7 @@ I didn't actually code most of this.<br>
 ![http://i.imgur.com/7V6hdfQ.jpg](http://i.imgur.com/7V6hdfQ.jpg)
 
 ### Dotfiles
-- [some `.vimrc` and `.gitconfig` stuff](https://github.com/gf3/dotfiles) from [Gianni Chiappetta](https://github.com/gf3)
+- [some `.vimrc` and `.gitconfig` stuff](https://github.com/gf3/dotfiles) thanks to [Gianni Chiappetta](https://github.com/gf3)
 - [some `.aliases`](https://github.com/mathiasbynens/dotfiles/blob/master/.aliases) and [`.osx` files](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) thanks to [Mathias Bynens](https://github.com/mathiasbynens)
 - [some `.gitconfig` stuff](https://github.com/sontek/dotfiles/blob/master/_gitconfig) thanks to [John Anderson](https://github.com/sontek)
 - [some more `.gitconfig` stuff](https://github.com/brauliobo/gitconfig/tree/master/configs) thanks to [Bráulio Bhavamitra](https://github.com/brauliobo)
