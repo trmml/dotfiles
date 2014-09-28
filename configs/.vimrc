@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set cursorline " Highlight current line
 
 set bs=2
 :set backspace=indent,eol,start
