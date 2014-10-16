@@ -149,9 +149,9 @@ package="brew"
 function="install_brew"
 install_package
 
-# package="rvm"
-# function="install_rvm"
-# install_package
+package="rvm"
+function="install_rvm"
+install_package
 
 package="node"
 function="install_node"
@@ -291,7 +291,7 @@ R=
 W=
 
 # Add rbenv to bash so that it loads every time you open a terminal
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # If the `"$GOPATH"` directories don't already exist, create them
 # if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
@@ -307,8 +307,8 @@ eval "$(rbenv init -)"
 # export CLICOLOR=1
 # export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# Add RVM to PATH for scripting
-# export PATH="$PATH:$HOME/.rvm/bin"
+Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
 
-# Load RVM into a shell session *as a function*
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
