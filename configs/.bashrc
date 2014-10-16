@@ -290,15 +290,18 @@ function test_gem() {
 R=
 W=
 
+# Add rbenv to bash so that it loads every time you open a terminal
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # If the `"$GOPATH"` directories don't already exist, create them
-if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
-  mkdir -p "$HOME/go/src/github.com/trommel"
-  echo "$HOME/go/src/github.com/trommel has been created"
-fi
+# if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
+#   mkdir -p "$HOME/go/src/github.com/trommel"
+#   echo "$HOME/go/src/github.com/trommel has been created"
+# fi
 
 # Set GOPATH and add it to $PATH
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
 
 # Make Terminal colorful
 # export CLICOLOR=1
