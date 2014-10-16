@@ -23,13 +23,13 @@ update() {
   brew cask cleanup
 
   # Update rvm
-  #rvm get stable
+  rvm get stable
 
   # Install rvm requirements (this should only really need to happen once, but I might as well put it in here)
-  # rvm requirements
+  rvm requirements
 
   # Reload rvm
-  # rvm reload
+  rvm reload
 
   # Install/Update Alcatraz
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
@@ -290,25 +290,22 @@ function test_gem() {
 R=
 W=
 
-# Add rbenv to bash so that it loads every time you open a terminal
-# eval "$(rbenv init -)"
-
 # If the `"$GOPATH"` directories don't already exist, create them
-# if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
-#   mkdir -p "$HOME/go/src/github.com/trommel"
-#   echo "$HOME/go/src/github.com/trommel has been created"
-# fi
+if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
+  mkdir -p "$HOME/go/src/github.com/trommel"
+  echo "$HOME/go/src/github.com/trommel has been created"
+fi
 
 # Set GOPATH and add it to $PATH
-# export GOPATH=$HOME/go
-# export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Make Terminal colorful
 # export CLICOLOR=1
 # export LSCOLORS=GxFxCxDxBxegedabagaced
 
-Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
-Load RVM into a shell session *as a function*
+# Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
