@@ -1,75 +1,75 @@
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 update() {
-  
+
   # Get current directory for later
   cwd=$(pwd)
-  
+
   # `cd` into the home directory
   cd ~
-  
+
   # Update Apple (App Store, mostly) Stuff
   # sudo softwareupdate -i -a -v
-  
+
   # Update dotfiles unless the user specifies "--without-dotfiles-stuff" as an argument to the update function
   if [[ ! "$1" == "--without-dotfiles-stuff" ]]; then curl -Ls http://git.io/c9yaXQ | sh; fi
-  
+
   # Update all Homebrew packages
   brew update
   brew upgrade
-  
+
   # General Homebrew Cleanup
   brew prune
   brew cleanup
   brew cask cleanup
-  
+
   # Update rvm
-  rvm get stable
-  
+  #rvm get stable
+
   # Install rvm requirements (this should only really need to happen once, but I might as well put it in here)
-  rvm requirements
-  
+  # rvm requirements
+
   # Reload rvm
-  rvm reload
-  
+  # rvm reload
+
   # Install/Update Alcatraz
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-  
+
   # Update global npm packages
   npm update -g
-  
+
   # Update Atom packages, and always say "yes" when asked if you would like to update said package/thing
   yes | apm upgrade
-  
+
   # Update RubyGems (not to be confused with the gems that are installed)
   update_rubygems
-  
+
   # Update Gems
   gem update
-  
+
   # Update Heroku
   heroku update
-  
+
   # Install/Update Keybase's CLI
   keybase-installer
-  
+
   # Install Vundle if it's not already installed
   if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
     echo "$HOME/.vim/bundle/Vundle.vim has been created"
   fi
-  
+
   # Source .bashrc
   source .bashrc
-  
+
   # `cd` back into the original directory
   cd $cwd
-  
+
   # Update/Upgrade Pip
   # pip install --upgrade pip
-  
+
   # Update/Upgrade Pip's setuptools
   # pip install --upgrade setuptools
-  
+
   # Uninstall Alcatraz if the user specifies "--uninstall-alcatraz" as an argument to the update function
   if [ "$1" == "--uninstall-alcatraz" ]; then
     rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
@@ -149,9 +149,9 @@ package="brew"
 function="install_brew"
 install_package
 
-package="rvm"
-function="install_rvm"
-install_package
+# package="rvm"
+# function="install_rvm"
+# install_package
 
 package="node"
 function="install_node"
@@ -305,7 +305,7 @@ export PATH=$PATH:$GOPATH/bin
 # export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
