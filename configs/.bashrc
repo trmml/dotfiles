@@ -291,7 +291,7 @@ R=
 W=
 
 # Add rbenv to bash so that it loads every time you open a terminal
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(rbenv init -)"
 
 # If the `"$GOPATH"` directories don't already exist, create them
 # if [[ ! -d "$HOME/go/src/github.com/trommel" ]]; then
