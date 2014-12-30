@@ -286,6 +286,10 @@ function test_gem() {
   rm *gem
 }
 
+# For working with THEOS
+export THEOS=/opt/theos
+export THEOS_DEVICE_IP=bae-2.local THEOS_DEVICE_PORT=22
+
 # Reset variables
 R=
 W=
