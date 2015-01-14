@@ -230,13 +230,14 @@ C="\[\033[0;39m\]" # clear
 LAMBDA='λ'
 
 # Get current Git branch in Simple English
-# __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+__git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 
 # Custom PS1 (with Git branch in Simple English)
-# export PS1="$B\u$C \w $G$__git_branch$C$R$LAMBDA $C"
+# Why won't the $R variable work, what the heck
+export PS1="$B\u$C \w $G$__git_branch\[\033[0;31m\]$LAMBDA $C"
 
 # Custom PS1
-export PS1="$B\u$C \w$R $LAMBDA $C"
+# export PS1="$B\u$C \w$R $LAMBDA $C"
 
 # Casks Path
 export CASKS_PATH="/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/"
