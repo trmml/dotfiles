@@ -224,8 +224,8 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 R="\[\033[0;31m\]" # red
 G="\[\033[0;32m\]" # green
 B="\[\033[0;34m\]" # blue
-M="\e[0;35m"
-CYAN="\e[0;36m"
+M="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
 C="\[\033[0;39m\]" # clear
 
 # Lambda variable, obviously
