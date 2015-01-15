@@ -224,6 +224,8 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 R="\[\033[0;31m\]" # red
 G="\[\033[0;32m\]" # green
 B="\[\033[0;34m\]" # blue
+M="\e[0;35m"
+CYAN="\e[0;36m"
 C="\[\033[0;39m\]" # clear
 
 # Lambda variable, obviously
@@ -234,7 +236,7 @@ __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$
 
 # Custom PS1 (with Git branch in Simple English)
 # Why won't the $R variable work, what the heck
-export PS1="$B\u$C \w $G$__git_branch\[\033[0;31m\]$LAMBDA $C"
+export PS1="\[\033[0;31m\]\u$C in $CYAN\w$C $G$__git_branch$LAMBDA$C "
 
 # Custom PS1
 # export PS1="$B\u$C \w$R $LAMBDA $C"
