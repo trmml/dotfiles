@@ -29,7 +29,7 @@ I didn't actually code most of this.<br>
 - [some more `.gitconfig` stuff](https://github.com/brauliobo/gitconfig/tree/master/configs) thanks to [Bráulio Bhavamitra](https://github.com/brauliobo)
 
 ### Themes
-- [Base16 Terminal Theme](http://git.io/S04dtg) thanks to [Steven Haddox](https://github.com/stevenhaddox)
+- [Base16 Terminal Theme](http://git.io/S04dtg) thanks to [Steven Haddox](https://github.com/stevenhaddox), I also have my modified version of this in there :)
 - [Dracula Terminal Theme](https://atom.io/packages/dracula-theme#terminalapp) thanks to [Zeno Rocha](https://github.com/zenorocha)
 - [xhinking alfred theme](https://github.com/xhinking/Alfred/blob/master/xhinking.alfredappearance) by [xhinkig](xhinking) (I modded it a bit)
 - [Lucario Theme for Terminal](https://github.com/raphamorim/lucario/blob/master/terminal/Lucario.terminal) by [Raphael Amorim](https://github.com/raphamorim)
