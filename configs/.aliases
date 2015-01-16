@@ -5,6 +5,9 @@ eval "$(hub alias -s)"
 # alias cp='cp -g'
 # alias mv='mv -g'
 
+# I always forget this so
+alias rvm='rbenv'
+
 # Set betty alias
 alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
 
