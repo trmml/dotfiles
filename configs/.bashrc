@@ -22,14 +22,14 @@ update() {
   brew cleanup
   brew cask cleanup
 
-  # Update rvm
-  rvm get stable
+  # Update
+  # rvm get stable
 
   # Install rvm requirements (this should only really need to happen once, but I might as well put it in here)
-  rvm requirements
+  # rvm requirements
 
   # Reload rvm
-  rvm reload
+  # rvm reload
 
   # Install/Update Alcatraz
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
@@ -82,10 +82,10 @@ install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
 
-# Install rvm
-install_rvm() {
-  \curl -L https://get.rvm.io | bash -s stable --ruby
-}
+# Install
+# install_rvm() {
+#   \curl -L https://get.rvm.io | bash -s stable --ruby
+# }
 
 # Install Node (without npm)
 install_node() {
@@ -149,9 +149,9 @@ package="brew"
 function="install_brew"
 install_package
 
-package="rvm"
-function="install_rvm"
-install_package
+# package=""
+# function="install_rvm"
+# install_package
 
 package="node"
 function="install_node"
@@ -311,8 +311,8 @@ export PATH=$PATH:$GOPATH/bin
 # export CLICOLOR=1
 # export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add  to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
