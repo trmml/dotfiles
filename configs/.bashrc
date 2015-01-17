@@ -303,6 +303,9 @@ if [[ ! -d "$HOME/.go/src/github.com/trommel" ]]; then
   echo "$HOME/.go/src/github.com/trommel has been created"
 fi
 
+# Set up rbenv
+eval "$(rbenv init -)"
+
 # Set GOPATH and add it to $PATH
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
