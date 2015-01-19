@@ -46,6 +46,9 @@ update() {
   # Update Gems
   gem update
 
+  # Clean up Gems
+  gem cleanup
+
   # Update Heroku
   heroku update
 
