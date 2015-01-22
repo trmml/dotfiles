@@ -78,6 +78,8 @@ update() {
     rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
     rm -rf ~/Library/Application\ Support/Alcatraz
   fi
+
+  rm -rf ~/dotfiles
 }
 
 # Install Brew
