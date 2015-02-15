@@ -1,6 +1,9 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Default irc client
+alias irc='irssi'
+
 # Make cp and mv always have progress bars
 # alias cp='cp -g'
 # alias mv='mv -g'
