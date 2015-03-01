@@ -19,15 +19,6 @@ update() {
   brew cleanup
   brew cask cleanup
 
-  # Update rvm
-  rvm get stable
-
-  # Install rvm requirements (this should only really need to happen once, but I might as well put it in here)
-  rvm requirements
-
-  # Reload rvm
-  rvm reload
-
   # Install/Update Alcatraz
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
@@ -77,11 +68,6 @@ update() {
 # Install Brew
 install_brew() {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-}
-
-# Install rvm
-install_rvm() {
-  \curl -L https://get.rvm.io | bash -s stable --ruby
 }
 
 # Install Node (without npm)
@@ -144,10 +130,6 @@ install_package() {
 
 package="brew"
 function="install_brew"
-install_package
-
-package="rvm"
-function="install_rvm"
 install_package
 
 package="node"
@@ -286,10 +268,6 @@ function test_gem() {
   rm *gem
 }
 
-# For working with THEOS
-# export THEOS=/opt/theos
-# export THEOS_DEVICE_IP=grape-god.local THEOS_DEVICE_PORT=22
-
 # Reset variables
 unset R
 unset W
@@ -297,22 +275,8 @@ unset W
 # Vim master race
 export EDITOR="vim"
 
-# If the `"$GOPATH"` directories don't already exist, create them
-# if [[ ! -d "$HOME/.go/src/github.com/trommel" ]]; then
-#   mkdir -p "$HOME/.go/src/github.com/trommel"
-#   echo "$HOME/.go/src/github.com/trommel has been created"
-# fi
+# Add rbenv to the path
+export PATH="$HOME/.rbenv/bin:$PATH"
 
-# Set GOPATH and add it to $PATH
-# export GOPATH=$HOME/.go
-# export PATH=$PATH:$GOPATH/bin
-
-# Make Terminal colorful
-# export CLICOLOR=1
-# export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# Add `rbenv init` for enabling shims & autocompletion
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
