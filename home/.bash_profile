@@ -8,10 +8,6 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
-if [ -f ~/.profile]; then
-  source ~/.profile
-fi
-
 if [ -f ~/.osx ]; then
   source ~/.osx
 fi
