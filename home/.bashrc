@@ -10,9 +10,6 @@ update() {
   # Update Apple (App Store, mostly) Stuff
   # sudo softwareupdate -i -a -v
 
-  # Update dotfiles unless the user specifies "--without-dotfiles-stuff" as an argument to the update function
-  if [[ ! "$1" == "--without-dotfiles-stuff" ]]; then curl -Ls http://git.io/c9yaXQ | sh; fi
-
   # Update all Homebrew packages
   brew update
   brew upgrade
