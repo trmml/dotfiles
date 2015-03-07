@@ -2,7 +2,7 @@
 eval "$(hub alias -s)"
 
 # Alias gg
-alias git='gg'
+# alias git='gg'
 
 # Default irc client
 alias irc='irssi'
