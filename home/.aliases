@@ -1,6 +1,9 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Alias gg
+alias git='gg'
+
 # Default irc client
 alias irc='irssi'
 
