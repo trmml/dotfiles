@@ -210,12 +210,15 @@ C="\[\033[0;39m\]" # clear
 # Lambda variable, obviously
 LAMBDA='λ'
 
+# Heart variable, obviously
+HEART='♥'
+
 # Get current Git branch in Simple English
 __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 
 # Custom PS1 (with Git branch in Simple English)
 # Why won't the $R variable work, what the heck
-export PS1="\[\033[0;31m\]\u$C in $CYAN\w$C $G$__git_branch$LAMBDA$C "
+export PS1="\[\033[0;31m\]\u$C in $CYAN\w$C $G$__git_branch\[\033[0;31m\]$HEART$C "
 
 # Custom PS1
 # export PS1="$B\u$C \w$R $LAMBDA $C"
