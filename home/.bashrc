@@ -278,6 +278,9 @@ unset W
 # Vim master race
 export EDITOR="vim"
 
+# Bower completion
+bower completion
+
 # Add rbenv to the path
 export PATH="$HOME/.rbenv/bin:$PATH"
 
