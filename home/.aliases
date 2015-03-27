@@ -1,9 +1,6 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
-# Alias gg
-# alias git='gg'
-
 # Default irc client
 alias irc='irssi'
 
@@ -12,9 +9,6 @@ alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
 
 # Set alias for `imgurr`
 alias imgur="imgurr"
-
-# Set alias for `arrg`
-alias pirate=arrg
 
 # Make `ls` colourful
 alias ls="ls -FG"
@@ -28,7 +22,7 @@ alias tree='tree -Ca -I ".git|.svn|*.pyc|*.swp"'
 # Make sure I don't accidentally open irb again
 alias irb="pry"
 
-# I'll probably never use this but I'll never deletet it because xkcd.com/530
+# I'll probably never use this but I'll never delete it because xkcd.com/530
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 
