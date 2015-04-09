@@ -281,6 +281,9 @@ export EDITOR="vim"
 # Bower completion
 bower completion
 
+# Z
+. `brew --prefix`/etc/profile.d/z.sh
+
 # Add rbenv to the path
 export PATH="$HOME/.rbenv/bin:$PATH"
 
