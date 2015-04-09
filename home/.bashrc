@@ -278,9 +278,6 @@ unset W
 # Vim master race
 export EDITOR="vim"
 
-# Bower completion
-bower completion
-
 # Z
 . `brew --prefix`/etc/profile.d/z.sh
 
