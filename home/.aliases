@@ -1,6 +1,9 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# Spotify via CLI
+alias spotify="osascript ~/Dropbox/Developer/repos/SpotifyControl/SpotifyControl.scpt"
+
 # Default irc client
 alias irc='irssi'
 
