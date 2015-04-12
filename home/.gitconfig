@@ -16,13 +16,11 @@
     ui = auto
 
 [alias]
-  status = status -sb
-  st = status
-  b = branch
-  ch = checkout
-  p = pull
+  st = status -sb
+  undo = reset HEAD~1 --mixed
+  amend = commit --amend
   delete-remote-branch = push origin --delete
   list = ls-files
   ls = ls-files
   root = rev-parse --show-toplevel
-  log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
