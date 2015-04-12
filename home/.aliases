@@ -1,6 +1,8 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+alias highlight="hicat"
+
 # homesick to hs
 alias hs="homesick"
 
