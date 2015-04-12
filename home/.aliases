@@ -1,6 +1,9 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# homesick to hs
+alias hs="homesick"
+
 # Spotify via CLI
 alias spotify="osascript ~/Dropbox/Developer/repos/SpotifyControl/SpotifyControl.scpt"
 
