@@ -2,7 +2,7 @@
   name  = Josh Trommel
   email = joshtrommel@gmail.com
 [github]
-	user = probablyjosh
+  user = probablyjosh
 [credential]
   helper = osxkeychain
 
