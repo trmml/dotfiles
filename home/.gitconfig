@@ -16,8 +16,8 @@
     ui = auto
 
 [alias]
+  st = status
   big = lfs
-  st = status -sb
   undo = reset HEAD~1 --mixed
   amend = commit --amend
   delete-remote-branch = push origin --delete
