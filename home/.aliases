@@ -1,6 +1,10 @@
 # Set alias for hub
 eval "$(hub alias -s)"
 
+# TheFuck to Fuck
+alias fuck='$(thefuck $(fc -ln -1))'
+
+# I'll never remember "hicat" for highlighting
 alias highlight="hicat"
 
 # homesick to hs
