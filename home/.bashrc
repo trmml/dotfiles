@@ -12,7 +12,7 @@ update() {
 
   # Update all Homebrew packages
   brew update
-  brew upgrade
+  brew upgrade --all
 
   # General Homebrew Cleanup
   brew prune
