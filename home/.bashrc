@@ -199,6 +199,7 @@ export PATH=/usr/local/bucket:$PATH
 export PATH=/usr/local/bin/keybase:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin # For convenience
 
 # Colors
 R="\[\033[0;31m\]" # red
