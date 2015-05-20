@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-Configuration files, scripts, and anything in between for OS X (well, \*nix). I use [Homesick](https://github.com/technicalpickles/homesick) to manage this.
+Configuration files, scripts, and anything in between for OS X (mostly for \*nix but I have a few OS X specifics). I use [Homesick](https://github.com/technicalpickles/homesick) to manage this. Homesick is sick. Try it out.
 
 ## Credits
 I didn't actually write a lot of this, so here's a list of people who did.
