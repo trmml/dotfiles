@@ -19,6 +19,11 @@ update() {
   brew cleanup
   brew cask cleanup
 
+  # Update Pip and its packages
+  pip install --upgrade pip
+  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+
+
   # Install/Update Alcatraz
   curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
