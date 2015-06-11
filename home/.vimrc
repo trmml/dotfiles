@@ -6,7 +6,6 @@ set bs=2
 :set backspace=indent,eol,start
 syntax enable
 set number
-colorscheme lucario
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -32,8 +31,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
-" Install Lucario theme
-Plugin 'raphamorim/lucario', {'name': 'lucario'}
 " Install vim-gtfo plugin (it's not really working right now :/)
 " Plugin 'justinmk/vim-gtfo'
 
