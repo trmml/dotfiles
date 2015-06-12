@@ -31,7 +31,10 @@ update() {
   npm update -g
 
   # Update Atom packages, and always say "yes" when asked if you would like to update said package/thing
-  yes | apm upgrade
+  # I haven't used Atom in weeks though
+  # It's slow as hell
+  
+  # yes | apm upgrade
 
   # Update RubyGems (not to be confused with the gems that are installed)
   update_rubygems
