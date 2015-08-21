@@ -1,3 +1,9 @@
+# irc->irssi
+alias irc="irssi"
+
+# imgur->imgurr
+alias imgur="imgurr"
+
 # Set alias for hub
 eval "$(hub alias -s)"
 
@@ -6,52 +12,3 @@ alias fuck='$(thefuck $(fc -ln -1))'
 
 # I'll never remember "hicat" for highlighting
 alias highlight="hicat"
-
-# homesick to hs
-alias hs="homesick"
-
-# Spotify via CLI
-alias spotify="osascript ~/Dropbox/Developer/repos/SpotifyControl/SpotifyControl.scpt"
-
-# Default irc client
-alias irc='irssi'
-
-# Set betty alias
-alias betty="~/Dropbox/Developer/random\ stuff/betty/main.rb"
-
-# Set alias for `imgurr`
-alias imgur="imgurr"
-
-# Make `ls` colourful
-alias ls="ls -FG"
-
-# Cask Namer
-alias cask-namer="$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer"
-
-# Make `tree` better
-alias tree='tree -Ca -I ".git|.svn|*.pyc|*.swp"'
-
-# Make sure I don't accidentally open irb again
-alias irb="pry"
-
-# I'll probably never use this but I'll never delete it because xkcd.com/530
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
-
-# Show/hide hidden files in Finder
-alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Empty the Trash on all mounted volumes and the main HDD
-# Also, clear Apple's System Logs to improve shell startup speed
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
