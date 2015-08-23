@@ -9,3 +9,9 @@ if [ -f ~/.aliases ]; then
 else
   echo "Error sourcing ~/.aliases"
 fi
+
+if [ -f ~/.osx ]; then
+  source ~/.osx
+else
+  echo "Error sourcing ~/.osx"
+fi
