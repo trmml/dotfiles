@@ -1,3 +1,6 @@
+# stream->peerflix
+alias stream="peerflix"
+
 # irc->irssi
 alias irc="irssi"
 
