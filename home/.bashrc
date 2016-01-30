@@ -31,10 +31,7 @@ update() {
   npm update -g
 
   # Update Atom packages, and always say "yes" when asked if you would like to update said package/thing
-  # I haven't used Atom in weeks though
-  # It's slow as hell
-  
-  # yes | apm upgrade
+  yes | apm upgrade
 
   # Update RubyGems (not to be confused with the gems that are installed)
   update_rubygems
@@ -129,6 +126,11 @@ install_hub() {
   brew install hub
 }
 
+# Install Fortune
+install_fortune() {
+  brew install fortune
+}
+
 # Install `"$package"`
 install_package() {
   command -v $package >/dev/null 2>&1 || { echo "$package not found. Installing." >&2; $function; }
@@ -180,9 +182,17 @@ package="hub"
 function="install_hub"
 install_package
 
+package="hub"
+function="install_hub"
+install_package
+
+package="fortune"
+function="install_fortune"
+install_package
+
 # Reset variables
-package=
-function=
+set package
+set function
 
 # Create ~/.hushlogin if it doesn't already exist
 if [[ ! -f "~/.hushlogin" ]]; then
@@ -287,6 +297,9 @@ unset W
 
 # Vim master race
 export EDITOR="vim"
+
+# Run fortune
+fortune
 
 # Z
 . `brew --prefix`/etc/profile.d/z.sh
