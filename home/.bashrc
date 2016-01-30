@@ -298,8 +298,8 @@ unset W
 # Vim master race
 export EDITOR="vim"
 
-# Run fortune
-fortune
+# Print a short fortune
+fortune -s
 
 # Z
 . `brew --prefix`/etc/profile.d/z.sh
