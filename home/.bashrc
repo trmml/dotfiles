@@ -205,9 +205,6 @@ shopt -s cdspell
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
-# Add autocomplete for Homebrew
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-
 # Load NVM
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
