@@ -42,9 +42,6 @@ update() {
   # Update Heroku
   heroku update
 
-  # Install/Update Keybase's CLI
-  keybase-installer
-
   # Install Vundle if it's not already installed
   if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
@@ -115,12 +112,6 @@ install_coffee() {
   npm install -g coffee-script
 }
 
-# Install the Keybase CLI
-install_keybase() {
-  npm install -g keybase-installer
-  keybase-installer
-}
-
 # Install Hub
 install_hub() {
   brew install hub
@@ -172,10 +163,6 @@ install_package
 
 package="coffee"
 function="install_coffee"
-install_package
-
-package="keybase-installer"
-function="install_keybase"
 install_package
 
 package="hub"
