@@ -1,6 +1,8 @@
 dotfiles
 ========
 
+**Unmaintained, because I started using Fish and Hyper.js and realized the excessive customization isn't really necessary.**
+
 Configuration files, scripts, and anything in between for OS X (mostly for \*nix but I have a few OS X specifics). I use [Homesick](https://github.com/technicalpickles/homesick) to manage this. Homesick is sick. Try it out.
 
 ## Credits
